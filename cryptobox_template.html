@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cryptobox template example</title>
+		<meta http-equiv='cache-control' content='no-cache'>
+		<meta http-equiv='Expires' content='-1'>
+		<!-- you must reference the cryptobox.js file provided by Gourl -->
+		<script src="{% static 'your-app/js/cryptobox.js' %}" type="text/javascript"></script>	
+	</head>
+	<body>	
+		<div align="center" style="min-width:530px">
+			<iframe id="iframeID" style="border-radius:15px;border:1px solid #eee;padding:3px 6px;margin:10px;" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" width="530" height="230"></iframe>
+		</div>
+		<script>
+			/* You must call the cryptobox_show function and set as parameters (In this specific order) all the variables you are receiving from the cryptobox_rendering view in back end.*/
+			cryptobox_show({{boxID}}, '{{coin_name}}', '{{public_key}}', {{amount}}, 0, '{{period}}', '{{language}}', 'iframeID', '{{userID}}', 'MANUAL', '{{orderID}}', '', '', '{{hash}}', {{width}}, {{height}});
+		</script>
+	</body>
+</html>
