@@ -1,7 +1,7 @@
-from django.conf.urls import url
-from . import views
+from django.urls import path
+from . import views as view
 
 urlpatterns = [
     # (...) your other url's
-    url(r'^gourl_callback.html/$', views.callback, name='callback')
+    path('gourl_callback.html/', view.callback, name='callback')
 ]
