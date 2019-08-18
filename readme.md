@@ -1,5 +1,5 @@
 
-GoUrl.io Python's Django Bitcoin Payment Gateway - 
+GoUrl.io Python's Django v1 & v2 Bitcoin Payment Gateway - 
 ------------------------------------------------------
 
 
