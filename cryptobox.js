@@ -1,6 +1,6 @@
 	/**
 	* @package     GoUrl Bitcoin/Altcoin Payment Box - show iFrame Payment Box
-	* @copyright   2014-2020 Delta Consultants
+	* @copyright   2014-2021 Delta Consultants    
 	* @category    Javascript
 	* @website     https://gourl.io
 	* @api         https://gourl.io/api.html
@@ -30,7 +30,6 @@
 		else if (period == '') alert('Invalid period');
 		else if (public_key.length != 50) alert('Invalid public key');
 		else if (webdev_key != '' && (webdev_key.indexOf("DEV") == -1 || webdev_key.length < 20)) alert('Invalid webdev_key, leave it empty');
-		else if (ver == '') alert('Invalid ver value');
 		else if (hash == '') alert('Invalid payment box hash');
 		else 
 		{
@@ -41,7 +40,7 @@
 			'/pe/'+encodeURIComponent(period.replace(' ', '_'))+'/l/'+encodeURIComponent(language)+
 			'/i/'+encodeURIComponent(iframeID)+'/u/'+encodeURIComponent(userID)+
 			'/us/'+encodeURIComponent(userFormat)+'/o/'+encodeURIComponent(orderID)+
-			'/t/'+encodeURIComponent(ver)+
+			(ver?'/t/'+encodeURIComponent(ver):'')+
 			(webdev_key?'/w/'+encodeURIComponent(webdev_key):'')+
 			(width>0?'/ws/'+encodeURIComponent(width):'')+
 			(height>0?'/hs/'+encodeURIComponent(height):'')+
